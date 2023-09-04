@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>recuperar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form [formGroup]="recuperar">
+    <ion-card class="card">
+      <img alt="Silhouette of mountains" src="assets/imagen/img-password.svg" class="azul img-card"/>
+      <ion-header class=""> Ingresa tu correo</ion-header>
+      <ion-item>
+        <ion-input label="Correo" formControlName="correo"  label-placement="floating" fill="solid"  type="email" errorText="Correo invalido"
+        ngModel
+        email></ion-input>
+      </ion-item>
+
+      <ion-card-content>
+        <ion-button fill="solid" class="button-login azul" (click)="formatear()"> <ion-icon name="log-in"  slot="end"></ion-icon> Iniciar Sesión</ion-button>
+        
+      </ion-card-content>
+    </ion-card>
+  </form>
+</ion-content>

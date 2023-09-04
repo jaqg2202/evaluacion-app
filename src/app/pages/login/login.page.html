@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="azul">
+    <ion-title>Hola! Bienvenido</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <form [formGroup]="login">
+    <ion-img src="assets/imagen/img-login.svg" ></ion-img>
+
+
+    <ion-input label="Usuario" formControlName="usuario" label-placement="floating" class="ion-margin-top" fill="solid" ></ion-input>
+
+
+    <ion-input label="Contraseña" formControlName="password" type="password"  label-placement="floating" class="ion-margin-top" fill="solid" ></ion-input>
+
+
+    <ion-button fill="solid" class="button-login azul" (click)="iniciar()"> <ion-icon name="log-in" slot="end"></ion-icon> Iniciar Sesión</ion-button>
+
+
+    <ion-button fill="outline" class="button-login color" (click)="navegarRegistro()">Registrarse</ion-button>
+  </form>
+</ion-content>

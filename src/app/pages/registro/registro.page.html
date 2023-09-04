@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <form [formGroup]="registro">
+    <ion-card class="card">
+      <img alt="Silhouette of mountains" src="assets/imagen/img-signup.svg" class="azul img-card"/>
+      <ion-item>
+        <ion-input label="Correo" formControlName="correo"  label-placement="floating" fill="solid"  type="email" errorText="Correo invalido"
+        ngModel
+        email></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Usuario" formControlName="usuario" label-placement="floating" fill="solid" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Contraseña" formControlName="contrasena" type="password" label-placement="floating" fill="solid" ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Confirmar Contraseña" formControlName="confirmarContrasena" type="password" label-placement="floating" fill="solid" ></ion-input>
+      </ion-item>
+
+    
+      <ion-card-content>
+        <ion-button fill="solid" class="button-login azul" (click)="guardar()"> <ion-icon name="log-in"  slot="end"></ion-icon> Iniciar Sesión</ion-button>
+        
+      </ion-card-content>
+    </ion-card>
+  </form>
+</ion-content>

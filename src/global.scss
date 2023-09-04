@@ -24,3 +24,38 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+.card{
+    margin-top: 50%;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+.img-card{
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-top: 2.5%
+}
+.button-login{
+    padding-left: 25%;
+    padding-right: 25%;
+    padding-top: 2.5%;
+    width: 100%;
+}
+
+.azul{
+   --background: #0005F5;
+
+
+}
+
+.color{
+    
+    --color: #ffffff;
+    --border-color: #0005F5;
+
+}
+.nav{
+    --background: #0005F5;
+    --color: #ffffff;
+    --box-shadow: 20%;
+}
