@@ -6,10 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./principal.page.scss'],
 })
 export class PrincipalPage implements OnInit {
+  parametro = localStorage.getItem('nombre');
 
-  constructor() { }
-
-  ngOnInit() {
+  constructor() { 
+    
+   
   }
 
+  
+
+  ngOnInit() { console.log(this.parametro);
+  }
+
+  cerrarSesion(){
+    localStorage.removeItem('Ingresado');
+    localStorage.removeItem('nombre');
+  }
 }

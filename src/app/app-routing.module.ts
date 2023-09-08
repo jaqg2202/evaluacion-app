@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
-import { DbService } from './services/db.service';
+import { NoIngresadoGuard } from './guards/no-ingresado.guard';
+import { IngresadoGuard } from './guards/ingresado.guard';
+import { RecuperarGuard } from './guards/recuperar.guard';
 
 const routes: Routes = [
   {
     path: 'login',
-    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+    loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule),canActivate:[NoIngresadoGuard]
   },
   {
     path: '',
@@ -16,15 +18,15 @@ const routes: Routes = [
   
   {
     path: 'recuperar',
-    loadChildren: () => import('./pages/recuperar/recuperar.module').then( m => m.RecuperarPageModule)
+    loadChildren: () => import('./pages/recuperar/recuperar.module').then( m => m.RecuperarPageModule),canActivate:[NoIngresadoGuard]
   },
   {
     path: 'principal',
-    loadChildren: () => import('./pages/principal/principal.module').then( m => m.PrincipalPageModule),canActivate:[DbService]
+    loadChildren: () => import('./pages/principal/principal.module').then( m => m.PrincipalPageModule),canActivate:[IngresadoGuard]
   },
   {
     path: 'registro',
-    loadChildren: () => import('./pages/registro/registro.module').then( m => m.RegistroPageModule)
+    loadChildren: () => import('./pages/registro/registro.module').then( m => m.RegistroPageModule),canActivate:[NoIngresadoGuard]
   },
   {
     path: 'e404',
@@ -32,8 +34,9 @@ const routes: Routes = [
   },
   {
     path: 'contrasena',
-    loadChildren: () => import('./pages/contrasena/contrasena.module').then( m => m.ContrasenaPageModule)
+    loadChildren: () => import('./pages/contrasena/contrasena.module').then( m => m.ContrasenaPageModule),canActivate:[RecuperarGuard]
   },
+  
   {
     path: '**',
     redirectTo: 'e404',

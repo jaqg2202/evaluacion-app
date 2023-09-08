@@ -32,14 +32,18 @@ export class LoginPage implements OnInit {
   }
 
   async iniciar(){
-    var inicio = this.login.value;
-    var registrar = localStorage.getItem('usuario');
+    let inicio = this.login.value;
+    let registrar = localStorage.getItem('usuario');
     if(registrar !== null){
-      var login = JSON.parse(registrar);
+      let login = JSON.parse(registrar);
       if (login.user == inicio.usuario && login.password == inicio.password) {
+
         this.router.navigate(['principal']);
-        console.log(this.login);
+        localStorage.setItem('Ingresado', 'true');
+        localStorage.setItem('nombre',login.user);
+        
       }
+
     }
     
     
@@ -51,5 +55,7 @@ export class LoginPage implements OnInit {
     this.router.navigate(['registro'])
 
   }
-  
+  toRecuperar(){
+    this.router.navigate(['recuperar'])
+  }
 }

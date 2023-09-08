@@ -44,7 +44,7 @@
 
 .azul{
    --background: #0005F5;
-
+    
 
 }
 
@@ -58,4 +58,37 @@
     --background: #0005F5;
     --color: #ffffff;
     --box-shadow: 20%;
+}
+
+.letra-titulo{
+    font-size: 30px;
+    margin-right: 25%;
+    margin-left: 25%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold ;
+}
+.letra-subtitulo{
+    font-size: 15px;
+    margin-right: 23%;
+    margin-left: 23%;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+.letra-p{
+    font-size: 10px;
+    margin-right: 23%;
+    margin-left: 23%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    
+}
+.footer{
+    position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #0005F5; /* Cambia el color de fondo según tus preferencias */
+    color: white; /* Cambia el color del texto según tus preferencias */
+    padding: 10px; /* Añade espacio interno al pie de página para que se vea mejor */
+    text-align: center;
 }

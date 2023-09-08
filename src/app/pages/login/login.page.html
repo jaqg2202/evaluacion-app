@@ -15,9 +15,14 @@
     <ion-input label="Contraseña" formControlName="password" type="password"  label-placement="floating" class="ion-margin-top" fill="solid" ></ion-input>
 
 
-    <ion-button fill="solid" class="button-login azul" (click)="iniciar()"> <ion-icon name="log-in" slot="end"></ion-icon> Iniciar Sesión</ion-button>
+    <ion-button fill="solid" class="button-login azul" (click)="iniciar()"> <ion-icon name="log-in" slot="end"></ion-icon> INICIAR SESION</ion-button>
 
 
-    <ion-button fill="outline" class="button-login color" (click)="navegarRegistro()">Registrarse</ion-button>
+    <ion-button fill="outline" class="button-login color" (click)="navegarRegistro()">REGISTARSE</ion-button>
   </form>
+  <ion-footer [translucent]="true" class="footer">
+    <ion-toolbar class="azul ">
+      <ion-button fill="solid" color="dark" background="#ffffff" (click)="toRecuperar()" slot="end">RECUPERAR CONTRASEÑA</ion-button>
+    </ion-toolbar>
+  </ion-footer>
 </ion-content>

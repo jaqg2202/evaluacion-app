@@ -34,7 +34,7 @@ export class ContrasenaPage implements OnInit {
   }
 
   async newpass(){
-    var registrar = this.newpassword.value;
+    let registrar = this.newpassword.value;
 
     if (this.newpassword.invalid) {
       const alert = await this.alertController.create({
@@ -56,12 +56,12 @@ export class ContrasenaPage implements OnInit {
       
     }
 
-    var usuario = localStorage.getItem('usuario');
+    let usuario = localStorage.getItem('usuario');
 
     if(usuario !== null){
-      var f = JSON.parse(usuario);
+      let f = JSON.parse(usuario);
 
-      var newUsuario ={
+      let newUsuario ={
         email:f.email,
         user: f.user,
         password: registrar.contrasena
@@ -70,9 +70,14 @@ export class ContrasenaPage implements OnInit {
 
       localStorage.setItem('usuario',JSON.stringify(newUsuario));
       this.router.navigate(['login']);
+      localStorage.removeItem('clave');
       console.log(this.newpassword);
 
     }
 
+  }
+  salir(){
+    localStorage.removeItem('clave');
+   
   }
 }

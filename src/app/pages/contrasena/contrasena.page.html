@@ -1,6 +1,9 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>contrasena</ion-title>
+    <ion-title>RECUPERAR CONTRASEÑA</ion-title>
+    <ion-buttons slot="start" text="Salir" color="#ffffff" >
+      <ion-back-button type="ios" defaultHref="/" (click)="salir()"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -8,7 +11,7 @@
   <form [formGroup]="newpassword">
   <ion-card class="card">
     <img alt="Silhouette of mountains" src="assets/imagen/img-password.svg" class="azul img-card"/>
-    <ion-header class=""> Ingresa tu correo</ion-header>
+    
     <ion-item>
       <ion-input label="Contraseña" formControlName="contrasena" type="password" label-placement="floating" fill="solid" ></ion-input>
     </ion-item>

@@ -1,6 +1,9 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>recuperar</ion-title>
+    <ion-title>INGRESE SU CORREO</ion-title>
+    <ion-buttons slot="start" text="Salir" color="#ffffff" >
+      <ion-back-button type="ios" defaultHref="/"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -8,7 +11,7 @@
   <form [formGroup]="recuperar">
     <ion-card class="card">
       <img alt="Silhouette of mountains" src="assets/imagen/img-password.svg" class="azul img-card"/>
-      <ion-header class=""> Ingresa tu correo</ion-header>
+      
       <ion-item>
         <ion-input label="Correo" formControlName="correo"  label-placement="floating" fill="solid"  type="email" errorText="Correo invalido"
         ngModel
@@ -16,7 +19,7 @@
       </ion-item>
 
       <ion-card-content>
-        <ion-button fill="solid" class="button-login azul" (click)="formatear()"> <ion-icon name="log-in"  slot="end"></ion-icon> Iniciar Sesión</ion-button>
+        <ion-button fill="solid" class="button-login azul" (click)="formatear()">ACEPTAR</ion-button>
         
       </ion-card-content>
     </ion-card>

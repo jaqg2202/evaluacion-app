@@ -31,13 +31,13 @@ export class RecuperarPage implements OnInit {
   }
 
   formatear(){
-    var email = this.recuperar.value;
-    var verificar = localStorage.getItem('usuario');
+    let email = this.recuperar.value;
+    let verificar = localStorage.getItem('usuario');
     if(verificar !== null){
-      var emailverificar = JSON.parse(verificar);
+      let emailverificar = JSON.parse(verificar);
       if (emailverificar.email == email.correo) {
-        
-        this.router.navigate(['contrasena']);
+        localStorage.setItem('clave', 'true')
+       this.router.navigate(['contrasena'])
         }
         
       }

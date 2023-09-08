@@ -35,7 +35,7 @@ export class RegistroPage implements OnInit {
 
 
   async guardar(){
-    var registrar = this.registro.value;
+    let registrar = this.registro.value;
 
     if (this.registro.invalid) {
       const alert = await this.alertController.create({
@@ -57,7 +57,7 @@ export class RegistroPage implements OnInit {
       
     }
 
-    var usuario ={
+    let usuario ={
       user: registrar.usuario,
       password: registrar.contrasena,
       email: registrar.correo

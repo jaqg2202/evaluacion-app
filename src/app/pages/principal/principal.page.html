@@ -1,13 +1,24 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>principal</ion-title>
+  <ion-toolbar class="azul">
+    <ion-title>Bienvenido! {{parametro}}</ion-title>
+    <ion-buttons slot="start" text="Salir" color="#ffffff" >
+      <ion-back-button type="ios" defaultHref="/" (click)="cerrarSesion()"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">principal</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-card class="card">
+    <img alt="Bienvenidos" src="assets/imagen/img-welcome.svg" class="azul"/>
+    <ion-card-header>
+      <ion-card-title class="letra-titulo">Hola {{parametro}}</ion-card-title>
+      <ion-card-subtitle class="letra-subtitulo">Esta es nuestra Evalucion</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content class="letra-p">
+      Atte: David Cueva y Jose Quiroz
+    </ion-card-content>
+  </ion-card>
+
+  
 </ion-content>

@@ -1,13 +1,16 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>registro</ion-title>
+    <ion-title>Registro</ion-title>
+    <ion-buttons slot="start" text="Salir" color="#ffffff">
+      <ion-back-button type="ios" defaultHref="/"></ion-back-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <form [formGroup]="registro">
     <ion-card class="card">
-      <img alt="Silhouette of mountains" src="assets/imagen/img-signup.svg" class="azul img-card"/>
+      <img alt="SIgnUP" src="assets/imagen/img-signup.svg" class="azul img-card"/>
       <ion-item>
         <ion-input label="Correo" formControlName="correo"  label-placement="floating" fill="solid"  type="email" errorText="Correo invalido"
         ngModel
@@ -25,9 +28,14 @@
 
     
       <ion-card-content>
-        <ion-button fill="solid" class="button-login azul" (click)="guardar()"> <ion-icon name="log-in"  slot="end"></ion-icon> Iniciar Sesión</ion-button>
+        <ion-button fill="solid" class="button-login azul" (click)="guardar()"> <ion-icon name="log-in"  slot="end"></ion-icon> REGISTRAR</ion-button>
         
       </ion-card-content>
     </ion-card>
   </form>
+
+
+
+
+
 </ion-content>
