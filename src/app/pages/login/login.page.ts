@@ -6,6 +6,7 @@ import {
   FormControl, 
   Validators, 
   FormBuilder} from '@angular/forms';
+import { AlertController } from '@ionic/angular';
 
 
 @Component({
@@ -19,7 +20,8 @@ export class LoginPage implements OnInit {
   login: FormGroup;
 
   constructor(private router: Router,
-    public fb: FormBuilder) {
+    public fb: FormBuilder,
+    public alertController:AlertController) {
 
       this.login = this.fb.group({
         'usuario':new FormControl("",Validators.required),
@@ -42,8 +44,27 @@ export class LoginPage implements OnInit {
         localStorage.setItem('Ingresado', 'true');
         localStorage.setItem('nombre',login.user);
         
+      }else{
+        const alert = await this.alertController.create({
+          header: 'ERROR!',
+          subHeader: 'Credenciales Invalidadas',
+          message: 'Verifique por favor!.',
+          buttons: ['Aceptar'],
+        });
+    
+        await alert.present();
       }
 
+    }else{
+      const alert = await this.alertController.create({
+        header: 'ERROR!',
+        subHeader: 'Credenciales Invalidadas',
+        message: 'Verifique por favor!.',
+        buttons: ['Aceptar'],
+      });
+  
+      await alert.present();
+      return;
     }
     
     

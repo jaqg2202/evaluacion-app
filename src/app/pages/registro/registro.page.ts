@@ -48,9 +48,20 @@ export class RegistroPage implements OnInit {
       await alert.present();
       return;
     }else{
+      if (registrar.contrasena != registrar.confirmarContrasena) {
+        const alert = await this.alertController.create({
+          header: 'ERROR!',
+          subHeader: 'Contraseñas no coinciden',
+          message: 'Verifique por favor!',
+          buttons: ['Aceptar'],
+        });
+    
+        await alert.present();
+        return;
+      }
       const loading = await this.loadingCtrl.create({
-        message: 'Registrando...',
-        duration: 2000,
+        message: 'Registrado',
+        duration: 1000,
       });
   
       loading.present();

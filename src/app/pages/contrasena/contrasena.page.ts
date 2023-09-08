@@ -47,8 +47,19 @@ export class ContrasenaPage implements OnInit {
       await alert.present();
       return;
     }else{
+      if (registrar.contrasena != registrar.confirmarContrasena) {
+        const alert = await this.alertController.create({
+          header: 'ERROR!',
+          subHeader: 'Contraseñas no coinciden',
+          message: 'Verifique por favor!',
+          buttons: ['Aceptar'],
+        });
+    
+        await alert.present();
+        return;
+      }
       const loading = await this.loadingCtrl.create({
-        message: 'Registrando...',
+        message: 'Contraseña Restablecida...',
         duration: 2000,
       });
   
